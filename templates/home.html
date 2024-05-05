@@ -17,9 +17,10 @@
             optio quos maxime harum, voluptatibus, alias veritatis.
         </p>
         <h2>Open Positions</h2>
-        {% comment %} {% for job in jobs %} {% endcomment %}
-            {% comment %} {% endfor %} {% endcomment %}
-        <p><div>{{ jobs }}<div/></p>
+        {% for job in jobs %}
+        <p><div>{{ job['title'] }}<div/></p>
+            <div>location: {{job['location']}} <div/>
+            {% endfor %}
     <button>Contact Us</button>
 <div/>
 
